@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meal Data App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Meal Data</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('upload_file') }}">Upload CSV</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('view_data_from_file') }}">View CSV Data & Plot</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('view_db_data') }}">View Database Data</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-4">
+        <h1>Welcome to the Meal Data Analyzer</h1>
+        <p>Use the navigation bar to upload data or view analysis.</p>
+        <p><strong>Note:</strong> This is a simplified application for demonstration.</p>
+         <ul>
+            <li>Upload a CSV file (using the provided format) on the 'Upload CSV' page. This will load the data into the database.</li>
+            <li>'View CSV Data & Plot' shows data directly from the last uploaded CSV file and a histogram.</li>
+            <li>'View Database Data' shows the data currently stored in the SQLite database.</li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
