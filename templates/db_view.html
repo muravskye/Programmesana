@@ -29,8 +29,8 @@
       </div>
     </nav>
     <div class="container mt-4">
-        <h1>Meal Data from Database</h1>
-         <p>Data ordered by Protein (Descending)</p>
+        <h1>Meal Data no datubāzes</h1>
+         <p>Dati kārtoti dilstošā secībā skatoties pēc proteīna daudzuma</p>
 
          <form method="get" class="mb-3">
             <div class="row g-3 align-items-center">
@@ -42,12 +42,12 @@
                 </div>
                 <div class="col-auto">
                     <button type="submit" class="btn btn-secondary">Filter</button>
-                    <a href="{{ url_for('view_db_data') }}" class="btn btn-outline-secondary ms-2">Clear Filter</a>
+                    <a href="{{ url_for('view_db_data') }}" class="btn btn-outline-secondary ms-2">Notīrīt</a>
                 </div>
             </div>
         </form>
 
-        <h2>Data Table</h2>
+        <h2>Dati</h2>
          <div>
             {{ table|safe }}
         </div>
